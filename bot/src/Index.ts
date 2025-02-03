@@ -1,6 +1,7 @@
 import {Client, GatewayIntentBits} from "discord.js";
 import {registerEvent} from "../../core/src/handlers/EventsHandler";
 import {Test, Test2} from "./events/Test";
+import 'dotenv/config';
 
 const client = new Client({ intents: [
         GatewayIntentBits.Guilds,
