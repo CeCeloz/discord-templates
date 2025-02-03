@@ -1,0 +1,21 @@
+{
+  "name": "discord-templates",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/bot/src/Index.js",
+    "start:dev": "tsx watch bot/src/Index.ts"
+  },
+  "keywords": [],
+  "author": "celoz",
+  "license": "ISC",
+  "dependencies": {
+    "discord.js": "^14.17.3"
+  },
+  "devDependencies": {
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.3"
+  }
+}
