@@ -1,8 +1,13 @@
-import {CommandInteraction, InteractionResponse, SlashCommandBuilder} from "discord.js";
+import {CommandInteraction, SlashCommandBuilder} from "discord.js";
 
 export default abstract class SlashCommand {
-    public static data: SlashCommandBuilder;
-    public static registrationType: "guild" | "global";
+    abstract readonly data: SlashCommandBuilder;
 
-    abstract execute(interaction: CommandInteraction): void | Promise<void | InteractionResponse<boolean>>;
+    readonly registrationType: string;
+
+    constructor() {
+        this.registrationType = "global";
+    }
+
+    public abstract execute(interaction: CommandInteraction): void | Promise<void>;
 }
